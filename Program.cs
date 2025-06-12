@@ -44,7 +44,7 @@ namespace _main
       }
       public bool Compare(List<Card> _AtkDeck, List<Card> _DefDeck, string _Tr)
       {
-         bool result;
+         bool result = true;
          for (int i = 0; i <= _AtkDeck.Count-1; i++)
          {
             if ((_AtkDeck[i].Prt < _DefDeck[i].Prt) && ((_DefDeck[i].Suit == _AtkDeck[i].Suit)|(_DefDeck[i].Suit == _Tr)))
