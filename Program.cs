@@ -5,6 +5,18 @@ namespace _main
 {
    class Methods
    {
+      public Card[] Shuffle(Card[]? Y)
+      {
+         for (int x = 0; x<=Y.Length-1; x++)
+         {
+            Random _rnd = new Random();
+            int j = _rnd.Next(x+1);
+            Card swp = Y[j];
+            Y[j] = Y[x];
+            Y[x] = swp;
+         }
+         return Y;
+      }
       public void Move(List<Card> _From, int _Index, List<Card> _To)
       {
          _To.Add(_From[_Index]);
@@ -61,14 +73,7 @@ namespace _main
          var meth = new Methods();
          FileStream fl_strm = new FileStream("card_collection.json", FileMode.OpenOrCreate);
          Card[]? deck = JsonSerializer.Deserialize<Card[]>(fl_strm);
-         Random _rnd = new Random();
-         for (int x = 0; x<=deck.Length-1; x++)
-         {
-            int j = _rnd.Next(x+1);
-            Card swp = deck[j];
-            deck[j] = deck[x];
-            deck[x] = swp;
-         }
+         deck = meth.Shuffle(deck);
          var lst_deck = new List<Card>();
          for (int i = 0; i <= deck.Length - 1; i++)
          {
