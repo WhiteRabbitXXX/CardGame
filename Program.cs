@@ -15,7 +15,6 @@ namespace _main
             Y[j] = Y[x];
             Y[x] = swp;
          }
-         
          return Y;
       }
       public void Move(List<Card> _From, int _Index, List<Card> _To)
