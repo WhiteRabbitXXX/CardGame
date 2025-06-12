@@ -27,6 +27,14 @@ namespace _main
             Y[j] = Y[x];
             Y[x] = swp;
          }
+         string trump = Y[Y.Count-1].Suit;
+         foreach (Card card in Y)
+         {
+            if (card.Suit == trump)
+            {
+               card.Prt += 20;
+            }
+         }
          return Y;
       }
       public void Move(List<Card> _From, int _Index, List<Card> _To)
@@ -36,34 +44,16 @@ namespace _main
       }
       public bool Compare(List<Card> _AtkDeck, List<Card> _DefDeck, string _Tr)
       {
-         int atk = 0;
-         int def = 0;
-         bool result = true;
+         bool result;
          for (int i = 0; i <= _AtkDeck.Count-1; i++)
          {
-            if (_AtkDeck[i].Suit == _Tr)
-            {
-               atk = _AtkDeck[i].Prt + 20;
-            }
-            else
-            {
-               atk = _AtkDeck[i].Prt;
-            }
-            if (_DefDeck[i].Suit == _Tr)
-            {
-               def = _DefDeck[i].Prt + 20;
-            }
-            else
-            {
-               def = _DefDeck[i].Prt;
-            }
-            if ((atk > def) && ((_DefDeck[i].Suit != _AtkDeck[i].Suit)|(_DefDeck[i].Suit != _Tr)))
-            {
-               result = false;
-            }
-            else
+            if ((_AtkDeck[i].Prt < _DefDeck[i].Prt) && ((_DefDeck[i].Suit == _AtkDeck[i].Suit)|(_DefDeck[i].Suit == _Tr)))
             {
                result = true;
+            }
+            else
+            {
+               result = false;
             }
          }
          return result;
@@ -111,17 +101,17 @@ namespace _main
             Console.WriteLine("____Your Cards_____");
             for (int i = 0; i < Player1.Count; i++)
             {
-               Console.WriteLine($"[{i+1}] {Player1[i].Rank} of {Player1[i].Suit}");
+               Console.WriteLine($"[{i+1}] {Player1[i].Rank} of {Player1[i].Suit} ({Player1[i].Prt})");
             }
             Console.WriteLine("______Cards on table______");
             for (int i = 0; i < AtkTable.Count; i++)
             {
-               Console.Write($"{i+1} {AtkTable[i].Rank} of {AtkTable[i].Suit}\t");
+               Console.Write($"{i+1} {AtkTable[i].Rank} of {AtkTable[i].Suit} ({AtkTable[i].Prt})\t");
             }
             Console.WriteLine();
             for (int i = 0; i < DefTable.Count; i++)
             {
-               Console.Write($"{i+1} {DefTable[i].Rank} of {DefTable[i].Suit}\t");
+               Console.Write($"{i+1} {DefTable[i].Rank} of {DefTable[i].Suit} ({DefTable[i].Prt})\t");
             }
             // update ends
 
@@ -142,7 +132,6 @@ namespace _main
                   }
                   else
                   {
-                     meth.Move(DefTable, Convert.ToInt32(insert)-1, Player2);
                      Console.WriteLine("no defend");
                      Console.ReadLine();
                   }
