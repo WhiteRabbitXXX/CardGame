@@ -5,11 +5,11 @@ namespace _main
 {
    class Methods
    {
-      public Card[] Shuffle(Card[]? Y)
+      public List<Card> Shuffle(List<Card>? Y)
       {
-         for (int x = 0; x<=Y.Length-1; x++)
+         Random _rnd = new Random();
+         for (int x = 0; x<=Y.Count-1; x++)
          {
-            Random _rnd = new Random();
             int j = _rnd.Next(x+1);
             Card swp = Y[j];
             Y[j] = Y[x];
@@ -73,7 +73,7 @@ namespace _main
          // init starts
          var meth = new Methods();
          FileStream fl_strm = new FileStream("card_collection.json", FileMode.OpenOrCreate);
-         Card[]? deck = JsonSerializer.Deserialize<Card[]>(fl_strm);
+         List<Card>? deck = JsonSerializer.Deserialize<List<Card>>(fl_strm);
          deck = meth.Shuffle(deck);
          List<Card> lst_deck = deck.Cast<Card>().ToList();
          var Player1 = new List<Card>();
