@@ -3,6 +3,18 @@ using System.Text.Json;
 
 namespace _main
 {
+   class Card
+   {
+      public string Suit {get;}
+      public string Rank {get;}
+      public int Prt {get; set;}
+      public Card(string suit, string rank, int prt)
+      {
+        Suit = suit;
+        Rank = rank;
+        Prt = prt;
+      }
+   }
    class Methods
    {
       public List<Card> Shuffle(List<Card>? Y)
@@ -74,18 +86,17 @@ namespace _main
          FileStream fl_strm = new FileStream("card_collection.json", FileMode.OpenOrCreate);
          List<Card>? deck = JsonSerializer.Deserialize<List<Card>>(fl_strm);
          deck = meth.Shuffle(deck);
-         List<Card> lst_deck = deck.Cast<Card>().ToList();
          var Player1 = new List<Card>();
          var Player2 = new List<Card>();
          var AtkTable = new List<Card>();
          var DefTable = new List<Card>();
+         string _trump = deck[deck.Count-1].Suit;
          for (int i = 0; i < 4; i++)
          {
-            meth.Move(lst_deck, 0, Player1);
-            meth.Move(lst_deck, 0, Player2);
+            meth.Move(deck, 0, Player1);
+            meth.Move(deck, 0, Player2);
          }
-         string _trump = ($"--Trump is {lst_deck[lst_deck.Count-1].Rank} of {lst_deck[lst_deck.Count-1].Suit}--");
-         string _tr = lst_deck[lst_deck.Count-1].Suit;
+         
          bool game_on = true;
          
          // init ends
@@ -96,7 +107,7 @@ namespace _main
             // update starts
             Console.Clear();
             Console.WriteLine("====enter exit for exit====");
-            Console.WriteLine(_trump);
+            Console.WriteLine($"Trump is {_trump}");
             Console.WriteLine("____Your Cards_____");
             for (int i = 0; i < Player1.Count; i++)
             {
@@ -124,7 +135,7 @@ namespace _main
                {
                   meth.Move(Player1, Convert.ToInt32(insert)-1, AtkTable);
                   meth.Move(Player2, Convert.ToInt32(insert)-1, DefTable);
-                  if (meth.Compare(AtkTable, DefTable, _tr))
+                  if (meth.Compare(AtkTable, DefTable, _trump))
                   {
                      Console.WriteLine("yes defend");
                      Console.ReadLine();
@@ -143,17 +154,5 @@ namespace _main
          
          // loop end
       }
-   }
-   class Card
-   {
-     public string Suit {get;}
-     public string Rank {get;}
-     public int Prt {get; set;}
-      public Card(string suit, string rank, int prt)
-      {
-        Suit = suit;
-        Rank = rank;
-        Prt = prt;
-     }
    }
 }
