@@ -15,6 +15,7 @@ namespace _main
             Y[j] = Y[x];
             Y[x] = swp;
          }
+         
          return Y;
       }
       public void Move(List<Card> _From, int _Index, List<Card> _To)
@@ -74,11 +75,7 @@ namespace _main
          FileStream fl_strm = new FileStream("card_collection.json", FileMode.OpenOrCreate);
          Card[]? deck = JsonSerializer.Deserialize<Card[]>(fl_strm);
          deck = meth.Shuffle(deck);
-         var lst_deck = new List<Card>();
-         for (int i = 0; i <= deck.Length - 1; i++)
-         {
-            lst_deck.Add(deck[i]);
-         }
+         List<Card> lst_deck = deck.Cast<Card>().ToList();
          var Player1 = new List<Card>();
          var Player2 = new List<Card>();
          var AtkTable = new List<Card>();
