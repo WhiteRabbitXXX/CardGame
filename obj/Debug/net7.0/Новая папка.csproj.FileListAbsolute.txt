@@ -1,0 +1,30 @@
+C:\Users\Rothman\Desktop\Новая папка\obj\Debug\net7.0\Новая папка.csproj.AssemblyReference.cache
+C:\Users\Rothman\Desktop\Новая папка\obj\Debug\net7.0\Новая папка.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Rothman\Desktop\Новая папка\obj\Debug\net7.0\Новая папка.AssemblyInfoInputs.cache
+C:\Users\Rothman\Desktop\Новая папка\obj\Debug\net7.0\Новая папка.AssemblyInfo.cs
+C:\Users\Rothman\Desktop\Новая папка\obj\Debug\net7.0\Новая папка.csproj.CoreCompileInputs.cache
+C:\Users\Rothman\Desktop\Новая папка\bin\Debug\net7.0\Новая папка.exe
+C:\Users\Rothman\Desktop\Новая папка\bin\Debug\net7.0\Новая папка.deps.json
+C:\Users\Rothman\Desktop\Новая папка\bin\Debug\net7.0\Новая папка.runtimeconfig.json
+C:\Users\Rothman\Desktop\Новая папка\bin\Debug\net7.0\Новая папка.dll
+C:\Users\Rothman\Desktop\Новая папка\bin\Debug\net7.0\Новая папка.pdb
+C:\Users\Rothman\Desktop\Новая папка\obj\Debug\net7.0\Новая папка.dll
+C:\Users\Rothman\Desktop\Новая папка\obj\Debug\net7.0\refint\Новая папка.dll
+C:\Users\Rothman\Desktop\Новая папка\obj\Debug\net7.0\Новая папка.pdb
+C:\Users\Rothman\Desktop\Новая папка\obj\Debug\net7.0\Новая папка.genruntimeconfig.cache
+C:\Users\Rothman\Desktop\Новая папка\obj\Debug\net7.0\ref\Новая папка.dll
+C:\Users\Rothman\Desktop\card_game\bin\Debug\net7.0\Новая папка.exe
+C:\Users\Rothman\Desktop\card_game\bin\Debug\net7.0\Новая папка.deps.json
+C:\Users\Rothman\Desktop\card_game\bin\Debug\net7.0\Новая папка.runtimeconfig.json
+C:\Users\Rothman\Desktop\card_game\bin\Debug\net7.0\Новая папка.dll
+C:\Users\Rothman\Desktop\card_game\bin\Debug\net7.0\Новая папка.pdb
+C:\Users\Rothman\Desktop\card_game\obj\Debug\net7.0\Новая папка.csproj.AssemblyReference.cache
+C:\Users\Rothman\Desktop\card_game\obj\Debug\net7.0\Новая папка.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Rothman\Desktop\card_game\obj\Debug\net7.0\Новая папка.AssemblyInfoInputs.cache
+C:\Users\Rothman\Desktop\card_game\obj\Debug\net7.0\Новая папка.AssemblyInfo.cs
+C:\Users\Rothman\Desktop\card_game\obj\Debug\net7.0\Новая папка.csproj.CoreCompileInputs.cache
+C:\Users\Rothman\Desktop\card_game\obj\Debug\net7.0\Новая папка.dll
+C:\Users\Rothman\Desktop\card_game\obj\Debug\net7.0\refint\Новая папка.dll
+C:\Users\Rothman\Desktop\card_game\obj\Debug\net7.0\Новая папка.pdb
+C:\Users\Rothman\Desktop\card_game\obj\Debug\net7.0\Новая папка.genruntimeconfig.cache
+C:\Users\Rothman\Desktop\card_game\obj\Debug\net7.0\ref\Новая папка.dll

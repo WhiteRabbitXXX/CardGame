@@ -1,0 +1,217 @@
+[
+    {
+        "Suit":"Diamonds",
+        "Rank":"Ace",
+        "Prt": 9
+    }
+    ,
+    {
+        "Suit":"Hearts",
+        "Rank":"Ace",
+        "Prt": 9
+    }
+    ,
+    {
+        "Suit":"Clubs",
+        "Rank":"Ace",
+        "Prt": 9
+    }
+    ,
+    {
+        "Suit":"Spades",
+        "Rank":"Ace",
+        "Prt": 9
+    }
+    ,
+    {
+        "Suit":"Diamonds",
+        "Rank":"King",
+        "Prt": 8
+    }
+    ,
+    {
+        "Suit":"Hearts",
+        "Rank":"King",
+        "Prt": 8
+    }
+    ,
+    {
+        "Suit":"Clubs",
+        "Rank":"King",
+        "Prt": 8
+    }
+    ,
+    {
+        "Suit":"Spades",
+        "Rank":"King",
+        "Prt": 8
+    }
+    ,
+     {
+        "Suit":"Diamonds",
+        "Rank":"Queen",
+        "Prt": 7
+    }
+    ,
+    {
+        "Suit":"Hearts",
+        "Rank":"Queen",
+        "Prt": 7
+    }
+    ,
+    {
+        "Suit":"Clubs",
+        "Rank":"Queen",
+        "Prt": 7
+    }
+    ,
+    {
+        "Suit":"Spades",
+        "Rank":"Queen",
+        "Prt": 7
+    }
+    ,
+     {
+        "Suit":"Diamonds",
+        "Rank":"Jack",
+        "Prt": 6
+    }
+    ,
+    {
+        "Suit":"Hearts",
+        "Rank":"Jack",
+        "Prt": 6
+    }
+    ,
+    {
+        "Suit":"Clubs",
+        "Rank":"Jack",
+        "Prt": 6
+    }
+    ,
+    {
+        "Suit":"Spades",
+        "Rank":"Jack",
+        "Prt": 6
+    }
+    ,
+     {
+        "Suit":"Diamonds",
+        "Rank":"Ten",
+        "Prt": 5
+    }
+    ,
+    {
+        "Suit":"Hearts",
+        "Rank":"Ten",
+        "Prt": 5
+    }
+    ,
+    {
+        "Suit":"Clubs",
+        "Rank":"Ten",
+        "Prt": 5
+    }
+    ,
+    {
+        "Suit":"Spades",
+        "Rank":"Ten",
+        "Prt": 5
+    }
+    ,
+     {
+        "Suit":"Diamonds",
+        "Rank":"Nine",
+        "Prt": 4
+    }
+    ,
+    {
+        "Suit":"Hearts",
+        "Rank":"Nine",
+        "Prt": 4
+    }
+    ,
+    {
+        "Suit":"Clubs",
+        "Rank":"Nine",
+        "Prt": 4
+    }
+    ,
+    {
+        "Suit":"Spades",
+        "Rank":"Nine",
+        "Prt": 4
+    }
+    ,
+     {
+        "Suit":"Diamonds",
+        "Rank":"Eight",
+        "Prt": 3
+    }
+    ,
+    {
+        "Suit":"Hearts",
+        "Rank":"Eight",
+        "Prt": 3
+    }
+    ,
+    {
+        "Suit":"Clubs",
+        "Rank":"Eight",
+        "Prt": 3
+    }
+    ,
+    {
+        "Suit":"Spades",
+        "Rank":"Eight",
+        "Prt": 3
+    }
+    ,
+     {
+        "Suit":"Diamonds",
+        "Rank":"Seven",
+        "Prt": 2
+    }
+    ,
+    {
+        "Suit":"Hearts",
+        "Rank":"Seven",
+        "Prt": 2
+    }
+    ,
+    {
+        "Suit":"Clubs",
+        "Rank":"Seven",
+        "Prt": 2
+    }
+    ,
+    {
+        "Suit":"Spades",
+        "Rank":"Seven",
+        "Prt": 2
+    }
+    ,
+     {
+        "Suit":"Diamonds",
+        "Rank":"Six",
+        "Prt": 1
+    }
+    ,
+    {
+        "Suit":"Hearts",
+        "Rank":"Six",
+        "Prt": 1
+    }
+    ,
+    {
+        "Suit":"Clubs",
+        "Rank":"Six",
+        "Prt": 1
+    }
+    ,
+    {
+        "Suit":"Spades",
+        "Rank":"Six",
+        "Prt": 1
+    }
+]
