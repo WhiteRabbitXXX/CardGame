@@ -62,10 +62,40 @@ namespace _main
     //  {
 
     //  }
-     // public void BotTurn()
-     // {
-         
-    //  }
+      public int BotTurn(List<Card> Option, Card Atk, string _Tr)
+      {
+         var meth = new Methods();
+         int result = 0;
+         var _AtkDeck = new List<Card>();
+         var _DefDeck = new List<Card>();
+         Option.Sort((s1, s2) => s1.Prt.CompareTo(s2.Prt));
+         _AtkDeck.Add(Atk);
+         Console.WriteLine("____Option Cards_____");
+         for (int i = 0; i < Option.Count; i++)
+         {
+            Console.WriteLine($"[{i+1}] {Option[i].Rank} of {Option[i].Suit} ({Option[i].Prt})");
+         }
+         Console.ReadLine();
+         for (int i = 0; (i < Option.Count); i++)
+         {
+            _DefDeck.Add(Option[i]);
+            Console.WriteLine($"{_DefDeck[0].Rank} of {_DefDeck[0].Suit} ({_DefDeck[0].Prt})");
+            if (meth.Compare(_AtkDeck, _DefDeck, _Tr))
+            {
+               result = i;
+               Console.WriteLine(result+1);
+               Console.ReadLine();
+               return result;
+            }
+            else
+            {
+               _DefDeck.RemoveAt(0);
+            }
+         }
+         Console.WriteLine("no result");
+         Console.ReadLine();
+         return result;
+      }
    }
    class CardGame
    {
@@ -92,9 +122,11 @@ namespace _main
          // init ends
 
          // loop start
+         int round = 0;
          while (game_on)
          {
             // update starts
+            
             Console.Clear();
             Console.WriteLine("====enter exit for exit====");
             Console.WriteLine($"Trump is {_trump}");
@@ -103,6 +135,12 @@ namespace _main
             {
                Console.WriteLine($"[{i+1}] {Player1[i].Rank} of {Player1[i].Suit} ({Player1[i].Prt})");
             }
+            Console.WriteLine("____Bot Cards_____");
+            for (int i = 0; i < Player2.Count; i++)
+            {
+               Console.WriteLine($"[{i+1}] {Player2[i].Rank} of {Player2[i].Suit} ({Player2[i].Prt})");
+            }
+            
             Console.WriteLine("______Cards on table______");
             for (int i = 0; i < AtkTable.Count; i++)
             {
@@ -124,7 +162,7 @@ namespace _main
                else
                {
                   meth.Move(Player1, Convert.ToInt32(insert)-1, AtkTable);
-                  meth.Move(Player2, Convert.ToInt32(insert)-1, DefTable);
+                  meth.Move(Player2, meth.BotTurn(Player2, AtkTable[round], _trump), DefTable);
                   if (meth.Compare(AtkTable, DefTable, _trump))
                   {
                      Console.WriteLine("yes defend");
