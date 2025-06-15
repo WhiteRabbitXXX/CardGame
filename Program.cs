@@ -20,7 +20,7 @@ namespace _main
       public List<Card> Shuffle(List<Card>? Y)
       {
          Random _rnd = new Random();
-         for (int x = 0; x<=Y.Count-1; x++)
+         for (int x = 0; x<=Y!.Count-1; x++)
          {
             int j = _rnd.Next(x+1);
             Card swp = Y[j];
@@ -58,10 +58,34 @@ namespace _main
          }
          return result;
       }
-    //  public bool CheckOut()
-    //  {
-
-    //  }
+      public string AtkCheck(List<Card> AtkTable, List<Card> Player, string insert, string trump)
+      {
+         bool move = true;
+         while(move)
+         {
+            if ((insert == "pass")|(insert == "exit"))
+            {
+               move = false;
+               return "exit";
+            }
+            if (AtkTable.Count == 0)
+            {
+               Console.WriteLine(1);
+               move = false;
+            }
+            else if((AtkTable[0].Suit == Player[Convert.ToInt32(insert)-1].Suit))
+            {
+               Console.WriteLine(2);
+               move = false;
+            }
+            else
+            {
+               Console.WriteLine("Cant be played. Choose another card or pass");
+               insert = Console.ReadLine()!;
+            }
+         }
+         return insert!;
+      }
       public int BotTurn(List<Card> Option, Card Atk, string _Tr)
       {
          var meth = new Methods();
@@ -122,11 +146,12 @@ namespace _main
          // init ends
 
          // loop start
+         Console.WriteLine("press button");
+         Console.ReadLine();
          int round = 0;
          while (game_on)
          {
             // update starts
-            
             Console.Clear();
             Console.WriteLine("====enter exit for exit====");
             Console.WriteLine($"Trump is {_trump}");
@@ -155,6 +180,7 @@ namespace _main
 
             // insert starts
                var insert = Console.ReadLine();
+               insert = meth.AtkCheck(AtkTable, Player1, insert!, _trump);
                if (insert == "exit")
                {
                   game_on = false;
@@ -173,6 +199,7 @@ namespace _main
                      Console.WriteLine("no defend");
                      Console.ReadLine();
                   }
+                  round ++;
                }
 
             // insert ends
